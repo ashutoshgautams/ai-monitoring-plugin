@@ -1,0 +1,452 @@
+/**
+ * WP Genius Admin Styles
+ * Clean, modern interface that follows WordPress design patterns
+ */
+
+/* Stats Grid */
+.wp-genius-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.wp-genius-stat-card {
+    background: #fff;
+    border: 1px solid #c3c4c7;
+    border-radius: 4px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+    transition: box-shadow 0.2s ease;
+}
+
+.wp-genius-stat-card:hover {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.wp-genius-stat-number {
+    font-size: 2.5em;
+    font-weight: 600;
+    line-height: 1;
+    margin-bottom: 8px;
+    color: #1d2327;
+}
+
+.wp-genius-stat-label {
+    font-size: 14px;
+    color: #646970;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Stat card variants */
+.wp-genius-stat-success .wp-genius-stat-number {
+    color: #00a32a;
+}
+
+.wp-genius-stat-warning .wp-genius-stat-number {
+    color: #dba617;
+}
+
+.wp-genius-stat-error .wp-genius-stat-number {
+    color: #d63638;
+}
+
+.wp-genius-stat-info .wp-genius-stat-number {
+    color: #2271b1;
+}
+
+/* Dashboard Grid */
+.wp-genius-dashboard-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+@media (max-width: 960px) {
+    .wp-genius-dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Card Component */
+.wp-genius-card {
+    background: #fff;
+    border: 1px solid #c3c4c7;
+    border-radius: 4px;
+    padding: 20px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+}
+
+.wp-genius-card h2 {
+    margin: 0 0 16px 0;
+    font-size: 18px;
+    color: #1d2327;
+    border-bottom: 1px solid #f0f0f1;
+    padding-bottom: 12px;
+}
+
+/* Quick Actions */
+.wp-genius-quick-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.wp-genius-quick-actions .button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: flex-start;
+    padding: 12px 16px;
+    height: auto;
+    text-decoration: none;
+}
+
+.wp-genius-quick-actions .dashicons {
+    font-size: 16px;
+    width: 16px;
+    height: 16px;
+}
+
+/* Activity List */
+.wp-genius-activity-list {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.wp-genius-activity-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 12px 0;
+    border-bottom: 1px solid #f0f0f1;
+}
+
+.wp-genius-activity-item:last-child {
+    border-bottom: none;
+}
+
+.wp-genius-activity-item .dashicons {
+    margin-top: 2px;
+    font-size: 16px;
+    width: 16px;
+    height: 16px;
+}
+
+.wp-genius-activity-success .dashicons {
+    color: #00a32a;
+}
+
+.wp-genius-activity-warning .dashicons {
+    color: #dba617;
+}
+
+.wp-genius-activity-error .dashicons {
+    color: #d63638;
+}
+
+.wp-genius-activity-content strong {
+    display: block;
+    margin-bottom: 4px;
+}
+
+.wp-genius-activity-time {
+    font-size: 13px;
+    color: #646970;
+}
+
+/* Status Badges */
+.wp-genius-badge {
+    display: inline-block;
+    padding: 4px 8px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-radius: 3px;
+    line-height: 1;
+}
+
+.wp-genius-badge-success {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.wp-genius-badge-warning {
+    background: #fff3cd;
+    color: #856404;
+    border: 1px solid #ffeaa7;
+}
+
+.wp-genius-badge-error {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.wp-genius-badge-info {
+    background: #d1ecf1;
+    color: #0c5460;
+    border: 1px solid #bee5eb;
+}
+
+/* Empty State */
+.wp-genius-empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    background: #fff;
+    border: 1px solid #c3c4c7;
+    border-radius: 4px;
+    margin-top: 20px;
+}
+
+.wp-genius-empty-icon {
+    margin-bottom: 20px;
+}
+
+.wp-genius-empty-icon .dashicons {
+    font-size: 80px;
+    width: 80px;
+    height: 80px;
+    color: #c3c4c7;
+}
+
+.wp-genius-empty-state h2 {
+    margin: 0 0 12px 0;
+    color: #1d2327;
+}
+
+.wp-genius-empty-state p {
+    color: #646970;
+    margin-bottom: 24px;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Form Container */
+.wp-genius-form-container {
+    background: #fff;
+    border: 1px solid #c3c4c7;
+    border-radius: 4px;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+}
+
+/* Setup Instructions */
+.wp-genius-setup-instructions {
+    background: #f6f7f7;
+    border: 1px solid #dcdcde;
+    border-radius: 4px;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.wp-genius-setup-instructions h3 {
+    margin: 0 0 20px 0;
+    color: #1d2327;
+}
+
+.wp-genius-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.wp-genius-step {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+}
+
+.wp-genius-step-number {
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    background: #2271b1;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.wp-genius-step-content h4 {
+    margin: 0 0 8px 0;
+    color: #1d2327;
+}
+
+.wp-genius-step-content p {
+    margin: 0 0 12px 0;
+    color: #646970;
+}
+
+/* Connection Key */
+.wp-genius-connection-key {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #fff;
+    border: 1px solid #c3c4c7;
+    border-radius: 4px;
+    padding: 8px 12px;
+    margin-top: 8px;
+}
+
+.wp-genius-connection-key code {
+    flex: 1;
+    background: none;
+    padding: 0;
+    font-family: Consolas, Monaco, monospace;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+/* Table Enhancements */
+.wp-list-table .column-status {
+    width: 100px;
+}
+
+.wp-list-table .column-version {
+    width: 100px;
+}
+
+.wp-list-table .column-last-check {
+    width: 120px;
+}
+
+.wp-list-table .column-actions {
+    width: 80px;
+}
+
+.wp-list-table td.column-url a {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    text-decoration: none;
+}
+
+.wp-list-table td.column-url a:hover {
+    text-decoration: underline;
+}
+
+.wp-list-table td.column-url .dashicons {
+    font-size: 14px;
+    width: 14px;
+    height: 14px;
+    opacity: 0.6;
+}
+
+/* Button Enhancements */
+.button .dashicons {
+    font-size: 16px;
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+    vertical-align: middle;
+    margin-top: -2px;
+}
+
+.button-small .dashicons {
+    font-size: 14px;
+    width: 14px;
+    height: 14px;
+    margin-right: 2px;
+}
+
+/* Required Field Indicator */
+.required {
+    color: #d63638;
+}
+
+/* Loading States */
+.wp-genius-loading {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.wp-genius-loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid #2271b1;
+    border-radius: 50%;
+    animation: wp-genius-spin 1s linear infinite;
+}
+
+@keyframes wp-genius-spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 782px) {
+    .wp-genius-stats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .wp-genius-quick-actions {
+        gap: 8px;
+    }
+    
+    .wp-genius-step {
+        flex-direction: column;
+        gap: 12px;
+    }
+    
+    .wp-genius-step-number {
+        align-self: flex-start;
+    }
+    
+    .wp-genius-connection-key {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+    }
+}
+
+/* Reports React App Container */
+#wp-genius-reports-app {
+    margin-top: 20px;
+}
+
+/* Notice Enhancements */
+.notice.wp-genius-notice {
+    border-left-width: 4px;
+    padding: 12px;
+}
+
+.notice.wp-genius-notice p {
+    margin: 0;
+}
+
+/* Animation Classes */
+.wp-genius-fade-in {
+    animation: wp-genius-fade-in 0.3s ease-in-out;
+}
+
+@keyframes wp-genius-fade-in {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.wp-genius-slide-up {
+    animation: wp-genius-slide-up 0.3s ease-out;
+}
+
+@keyframes wp-genius-slide-up {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
